@@ -27,7 +27,7 @@ namespace Contact.Models
         [Required]
         [EmailAddress]
 
-        public int MyProperty { get; set; }
+        public string email { get; set; }
 
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
