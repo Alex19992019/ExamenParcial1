@@ -8,21 +8,24 @@ namespace Contact.Models
 {
     public class FriendContact
     {
-        public enum ListType
+        public enum TypeList
         {
-            Alejandra,
-            Rodrigo,
-            Rossy,
-            Carmelo,
-            Bernarda
+            Sally,
+            Sonia,
+            Sarah,
+            Sam,
+            Summer
+
         }
+
         [Key]
         public int FriendId { get; set; }
         [Required]
         [Range(5,50)]
+        [Display(Description = "Complete Name")]
         public string name { get; set; }
 
-        public ListType LastName { get; set; }
+        public TypeList List { get; set; }
 
         [Required]
         [EmailAddress]
@@ -30,7 +33,7 @@ namespace Contact.Models
         public string email { get; set; }
 
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [Display(Description = "Complete Name")]
         public DateTime BirthDate { get; set; }
     }
 }
