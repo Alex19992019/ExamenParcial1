@@ -33,7 +33,7 @@ namespace Contact.Models
         public string email { get; set; }
 
         [DataType(DataType.Date)]
-        [Display(Description = "Complete Name")]
+        [Display(Description = "Birthday")]
         public DateTime BirthDate { get; set; }
     }
 }
